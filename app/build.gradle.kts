@@ -38,7 +38,7 @@ android {
     signingConfigs {
         // Configuração de assinatura para o build de release usando variáveis do .env
         create("release") {
-            storeFile = file(envProps["KEYSTORE_FILE"] as String)
+            storeFile = rootProject.file(envProps["KEYSTORE_FILE"] as String)
             storePassword = envProps["KEYSTORE_PASSWORD"] as String
             keyAlias = envProps["KEY_ALIAS"] as String
             keyPassword = envProps["KEY_PASSWORD"] as String
